@@ -1,0 +1,16 @@
+html{
+    background-color: #eeecf6; /*  #eeecf6; */
+    min-height: 100vh;
+}
+#root{
+    background-color:  #eeecf6;
+    /* position: relative; */
+    padding-bottom: 60px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+body{
+    min-height: 100vh;
+    position: relative;
+}
