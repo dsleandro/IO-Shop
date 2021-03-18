@@ -1,4 +1,7 @@
-const env = require("dotenv").config();
+if (process.env.NODE_ENV !== "production") {
+    require("dotenv").config();
+}
+
 const Path = require("path");
 const express = require("express");
 const multer = require("multer");

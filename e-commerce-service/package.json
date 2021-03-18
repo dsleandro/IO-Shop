@@ -1,9 +1,10 @@
 {
-  "name": "server",
+  "name": "e-commerce-service",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "dev": "cross-env NODE_ENV=development node src/index.js",
+    "start": "cross-env NODE_ENV=production node src/index.js"
   },
   "keywords": [],
   "author": "Leandro Dos Santos",
@@ -11,6 +12,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-session": "^1.17.0",

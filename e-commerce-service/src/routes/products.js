@@ -1,7 +1,6 @@
 const express = require("express");
 const Router = express.Router();
 const Product = require("../models/Product");
-const verifyToken = require("../config/verifyToken");
 
 function escapeRegex(text) {
         return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
@@ -11,6 +10,7 @@ Router.get("/", async (req, res) => {
         const products = await Product.find();
         res.json(products);
 });
+
 Router.get("/search", async (req, res) => {
         if (req.query.search) {
                 const regex = new RegExp(escapeRegex(req.query.search), 'gi');

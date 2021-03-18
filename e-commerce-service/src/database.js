@@ -4,6 +4,7 @@ const URI = process.env.MONGO_DB;
 
 mongoose.connect(URI, {
     useNewUrlParser: true,
+    dbName: "io-shop",
     useFindAndModify: false,
     useUnifiedTopology: true,
     useCreateIndex: true,
